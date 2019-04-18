@@ -35,7 +35,10 @@ import { MonthPipe } from './pipies/month.pipe';
     FormsModule,
     ReactiveFormsModule,
     FormlyModule.forRoot({
-      types: []
+      types: [],
+      validationMessages: [
+        // { name: 'required', message: '' },
+      ],
     }),
     FormlyMaterialModule,
     MatButtonModule,

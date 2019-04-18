@@ -23,8 +23,22 @@ const regex = (reg, message) => {
   };
 };
 
-const required = type => {
-  return type ? "This field is required!" : "Choose an option from above!";
+const requiredMessage = (message) => {
+  return {
+    expression: c => {
+      if (c.value) {
+        return true;
+      }
+
+      return false;
+    },
+    message: (error, field: FormlyFieldConfig) =>
+      'vui long dien vao ' + message
+  };
+};
+
+const required = (type) => {
+  return type ? "vui long nhap" : "Choose an option from above!";
 };
 
 const date = reg => {
@@ -47,7 +61,9 @@ const date = reg => {
 };
 
 export const validation = {
-  required: required(true),
+  requiredCustom: (message) => {
+    return requiredMessage(message);
+  },
   email: regex(
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,10}))$/,
     "email"
