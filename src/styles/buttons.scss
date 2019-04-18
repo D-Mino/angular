@@ -1,0 +1,22 @@
+a,
+button {
+  &[mat-raised-button],
+  &[mat-button],
+  &[mat-flat-button],
+  &[mat-stroked-button] {
+    font-size: 0.9rem !important;
+    line-height: 2.6rem;
+    min-height: 2.6rem;
+    text-transform: uppercase;
+    padding: 0 1.6rem;
+    border-radius: $border-radius;
+  }
+  &[button-small] {
+    line-height: 2.2rem;
+    min-height: 2.2rem;
+    padding: 0 1.4rem;
+  }
+  &[button-block] {
+    width: 100%;
+  }
+}

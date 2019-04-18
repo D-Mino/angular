@@ -1,0 +1,32 @@
+@import 'styles/reset';
+@import 'styles/theme';
+@import 'styles/buttons';
+@import 'styles/form';
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.snackBar {
+  background-color: $color-warn;
+  color: #ffffff;
+
+  button {
+    color: #ffffff;
+  }
+}
+
+.next {
+  background: $color-success !important;
+  color: #fff !important;
+}
+
+.confirm {
+  background: $color-success !important;
+  color: #fff !important;
+  float: right;
+  margin-bottom: 1.5rem !important;
+}

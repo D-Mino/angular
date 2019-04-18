@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+
+$custom-font: mat-typography-config(
+  $font-family:
+    'BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans
+, Droid Sans, Helvetica Neue, Helvetica, Arial'
+);
+@include mat-core($custom-font);
+
+$app-primary: mat-palette($mat-red, 600);
+$app-accent: mat-palette($mat-grey, 900);
+$app-warn: mat-palette($mat-orange, 800);
+$app-success: mat-palette($mat-green, 800);
+$app-info: mat-palette($mat-blue, 300);
+
+$clr-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+@include angular-material-theme($clr-theme);
+
+$color-primary: mat-color($app-primary);
+$color-accent: mat-color($app-accent);
+$color-success: mat-color($app-success);
+$color-warn: mat-color($app-warn);
+$color-info: mat-color($app-info);
+$grey-light: #f1f1f1;
+$grey-medium: #999;
+$grey-dark: #666;
+
+$border-radius: 5px;
